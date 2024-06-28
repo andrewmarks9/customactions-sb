@@ -70,7 +70,6 @@ jobs:
         with:
           bucket: gha-amarks-custom-action
           dist-folder: ./dist
-          #bucket-region: us-east-1
         - name: Output contents
         run: |
           echo "Live URL: ${{ steps.deploy-site.outputs.website-url }}"
