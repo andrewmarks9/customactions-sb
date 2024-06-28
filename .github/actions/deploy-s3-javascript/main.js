@@ -1,5 +1,4 @@
 const core = require('@actions/core');
-// const github = require('@actions/github');
 const exec = require('@actions/exec');
 
 function run () {
@@ -11,7 +10,7 @@ function run () {
 
     // upload files to S3
     const s3Uri = `s3://${bucket}`;
-    exec.exec(`aws s3 sync ${distFolder} ${s3Uri}` --region ${bucketRegion}`);
+    exec.exec(`aws s3 sync ${distFolder} ${s3Uri}`, { region: `${bucketRegion}` });
 
     core.notice('Hello from the deploy-s3-javascript action!');
 }
