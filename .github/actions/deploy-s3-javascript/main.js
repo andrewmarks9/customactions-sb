@@ -16,7 +16,7 @@ async function run() {
     // Upload files to S3
     try {
         await exec.exec(command);
-        core.notice('Hello from the deploy-s3-javascript action!');
+        const websiteUrl = `https://${bucket}.s3-website-${bucketRegion}.amazonaws.com`;
     } catch (error) {
         core.setFailed(`Action failed with error: ${error}`);
     }

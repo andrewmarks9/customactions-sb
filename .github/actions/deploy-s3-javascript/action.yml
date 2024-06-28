@@ -11,6 +11,9 @@ inputs:
   dist-folder:
     description: 'Name of the folder in the repository to deploy'
     required: true
+outputs:
+  website-url:
+    description: 'URL of the deployed website'
 runs:
   using: 'node20'
   main: 'main.js'
