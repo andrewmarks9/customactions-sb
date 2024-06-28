@@ -13,7 +13,7 @@ jobs:
         uses: ./.github/actions/cached-deps
         with:
           caching: 'false'
-      - name: Ouput information
+      - name: Output information
         run: echo "Cache Used? ${{ steps.cache-deps.outputs.used-cache }}"
       - name: Lint code
         run: npm run lint
@@ -70,7 +70,7 @@ jobs:
         with:
           bucket: gha-amarks-custom-action
           dist-folder: ./dist
-        - name: Output contents
+      - name: Output contents
         run: |
           echo "Live URL: ${{ steps.deploy-site.outputs.website-url }}"
 
